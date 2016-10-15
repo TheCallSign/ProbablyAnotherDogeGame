@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace MuchDogeSoWow
 {
-    class Program
+    class GameState
     {
-        public static void Main()
+        private Game _game;
+        public bool IsPlaying = true;
+
+        public GameState(Game game)
         {
-            Game game = new Game();
-            game.Init();
-            game.Loop();
+            _game = game;
         }
     }
 }
